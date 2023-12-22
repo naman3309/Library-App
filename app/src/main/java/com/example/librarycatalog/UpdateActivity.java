@@ -62,7 +62,7 @@ public class UpdateActivity extends AppCompatActivity {
     }
 
     private void confirmDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(UpdateActivity.this);
         builder.setTitle("Delete " + Bookname + "?");
         builder.setMessage(String.format("Are you sure to delete %s ?",Bookname));
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -78,5 +78,8 @@ public class UpdateActivity extends AppCompatActivity {
 
             }
         });
+
+
+
     }
 }

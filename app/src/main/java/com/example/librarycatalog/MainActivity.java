@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==R.id.delete_all){
+            confirmDialog();
             Toast.makeText(this, "Delete", Toast.LENGTH_SHORT).show();
-            confirmDialog(this);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -93,15 +93,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void confirmDialog(Context con){
-            AlertDialog.Builder builder = new AlertDialog.Builder(con);
+    public void confirmDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Delete All ?");
         builder.setMessage("Are you sure to delete all ?");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ndb.delete_all();
-                Intent i = new Intent(con,MainActivity.class);
+                Intent i = new Intent(MainActivity.this,MainActivity.class);
                 startActivity(i);
                 finish();
             }
