@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Library Catalog</string>
+    <string name="abb">Add Book</string>
+    <string name="an">Author Name</string>
+    <string name="bn">ISBN</string>
+    <string name="bname">Book Name</string>
+</resources>
